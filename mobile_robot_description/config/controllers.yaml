@@ -1,0 +1,30 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    diff_drive_controller:
+      type: diff_drive_controller/DiffDriveController
+
+diff_drive_controller:
+  ros__parameters:
+    left_wheel_names: ["left_wheel_joint"]
+    right_wheel_names: ["right_wheel_joint"]
+
+    # Must match the URDF exactly, or the odometry will be wrong
+    wheel_separation: 0.4
+    wheel_radius: 0.08
+
+    # Odometry: publishes /diff_drive_controller/odom and the odom -> base_footprint transform
+    base_frame_id: base_footprint
+    odom_frame_id: odom
+    enable_odom_tf: true
+    publish_rate: 50.0
+
+    # Speed limits
+    linear.x.max_velocity: 1.0     # m/s
+    angular.z.max_velocity: 2.0    # rad/s
+
+    cmd_vel_timeout: 0.5           # stop if no command arrives for 0.5 s
