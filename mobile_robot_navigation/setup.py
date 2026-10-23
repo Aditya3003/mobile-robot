@@ -20,8 +20,8 @@ setup(
     zip_safe=True,
     maintainer='kskaditya',
     maintainer_email='kskaditya3@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='SLAM Toolbox and Nav2 configuration and launch files for the mobile robot.',
+    license='Apache-2.0',
     extras_require={
         'test': [
             'pytest',

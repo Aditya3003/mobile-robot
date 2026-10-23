@@ -3,9 +3,9 @@
 <package format="3">
   <name>mobile_robot_navigation</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>SLAM Toolbox and Nav2 configuration and launch files for the mobile robot.</description>
   <maintainer email="kskaditya3@gmail.com">kskaditya</maintainer>
-  <license>TODO: License declaration</license>
+  <license>Apache-2.0</license>
 
   <depend>slam_toolbox</depend>
   <depend>nav2_bringup</depend>
